@@ -268,6 +268,18 @@ public class PortugolBaseListener implements PortugolListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterCabecalho(@NotNull PortugolParser.CabecalhoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCabecalho(@NotNull PortugolParser.CabecalhoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterOp_n1(@NotNull PortugolParser.Op_n1Context ctx) { }
 	/**
 	 * {@inheritDoc}

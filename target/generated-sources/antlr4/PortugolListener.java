@@ -218,6 +218,16 @@ public interface PortugolListener extends ParseTreeListener {
 	 */
 	void exitListaIDs(@NotNull PortugolParser.ListaIDsContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link PortugolParser#cabecalho}.
+	 * @param ctx the parse tree
+	 */
+	void enterCabecalho(@NotNull PortugolParser.CabecalhoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PortugolParser#cabecalho}.
+	 * @param ctx the parse tree
+	 */
+	void exitCabecalho(@NotNull PortugolParser.CabecalhoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link PortugolParser#op_n1}.
 	 * @param ctx the parse tree
 	 */

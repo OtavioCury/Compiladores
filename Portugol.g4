@@ -1,6 +1,8 @@
 grammar Portugol;
 
-programa: 'PROG' ID ';' decVars* decFunc* comandos+ 'FIM' '.'
+programa: cabecalho ';' decVars* decFunc* comandos+ 'FIM' '.'
+	;
+cabecalho: 'PROG' ID
 	;
 decVars: tipo listaIDs ';'
 	;
@@ -33,7 +35,7 @@ leitura: 'LEIA' '(' listaIDs ')' ';'
 	;
 sair: 'SAIR' ';'
 	;
-impressao: 'IMPRIMA' '(' STRING ')' ';'
+impressao: 'IMPRIMA' '(' expr ')' ';'
 	;
 expr:  expr op_n7 term1
 	| term1 
@@ -60,6 +62,7 @@ fator: '(' expr ')'
 	| NUM
 	| ID
 	| chamadaFunc
+	| STRING
 	;	
 op_n7: '|'
 	;
